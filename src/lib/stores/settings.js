@@ -1,6 +1,6 @@
 import { writable, get } from "svelte/store"
 
-const darkModeEnabled = typeof localStorage != "undefined" ? localStorage?.theme == "dark" : false
+const darkModeEnabled = typeof localStorage != "undefined" ? (localStorage?.theme == "dark" || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) : false
 
 const store = writable({
   darkMode: !!darkModeEnabled
