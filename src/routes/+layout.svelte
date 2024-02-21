@@ -1,5 +1,8 @@
 <script>
 	import '../app.scss'
+	import { settings } from '$lib/stores/settings.js'
 </script>
 
-<slot />
+<div class:dark={$settings.darkMode}>
+	<slot />
+</div>
