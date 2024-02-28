@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.markdown {
+		@apply text-gray-900 dark:text-slate-200;
+
+		a {
+			color: #4183c4;
+			text-decoration: none;
+
+			.octicon.octicon-link {
+				@apply inline-block mr-2 text-gray-900 dark:text-slate-200;
+				fill: currentColor;
+			}
+		}
+	
+		a:hover {
+			text-decoration: underline;
+		}
+	
+		p, blockquote, ul, ol, dl, table, pre {
+			margin: 15px 0;
+		}
+	
+		ul, ol {
+			padding-left: 30px;
+		}
+	
+		h1 {
+			border-bottom: 1px solid #ddd;
+			font-size: 2.5em;
+		}
+	
+		h2 {
+			border-bottom: 1px solid #eee;
+			font-size: 2.0em;
+		}
+	
+		h3 {
+			font-size: 1.5em;
+		}
+	
+		h4 {
+			font-size: 1.2em;
+		}
+	
+		h5 {
+			font-size: 1.0em;
+		}
+	
+		h6 {
+			color: #777;
+			font-size: 1.0em;
+		}
+	
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: bold;
+			line-height: 1.7;
+			margin: 1em 0 15px 0;
+		}
+	
+		h1 + p, h2 + p, h3 + p {
+			margin-top: 10px;
+		}
+			
+		img {
+			max-width: 100%;
+		}
+	
+		code,
+		pre {
+			@apply bg-gray-200 dark:bg-gray-700 p-1;
+			border-radius: 3px;
+			// border: 1px solid #DDD;
+			font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+			font-size: 14px;
+			white-space: pre;
+			.pl-c {
+				@apply dark:text-gray-400;
+			}
+		}
+
+		.highlight pre {
+			@apply bg-gray-100 dark:bg-gray-800 p-4;
+		}
+	
+		pre code {
+			border: none;
+			margin: 0;
+			padding: 0;
+			white-space: pre;
+		}
+
+		&.github {
+			padding-left: 2rem;
+			.markdown-heading {
+				position: relative;
+
+				.heading-element+.anchor-element {
+					position: absolute;
+					top: 60%;
+					left: -2rem;
+					display: flex;
+					width: 2rem;
+					height: 2rem;
+					margin: auto;
+					border-radius: 6px;
+					justify-content: center;
+					align-items: center;
+					transform: translateY(calc(-50% - 0.3rem));
+				}
+			}
+		}
+	}
+}

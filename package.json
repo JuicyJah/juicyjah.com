@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"build:watch": "vite build --watch",
 		"preview": "vite preview",
 		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
@@ -27,10 +28,12 @@
 		"svelte": "^4.2.7",
 		"tailwindcss": "^3.4.1",
 		"vite": "^5.0.3",
-		"vitest": "^1.2.0"
+		"vitest": "^1.2.0",
+		"wrangler": "^3.30.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^6.5.1"
+		"@fortawesome/fontawesome-free": "^6.5.1",
+		"mdsvex": "^0.11.0"
 	}
 }

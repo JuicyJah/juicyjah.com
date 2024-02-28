@@ -1,8 +1,7 @@
 <script>
 	import '../app.scss'
-	import { settings } from '$lib/stores/settings.js'
+	import DarkModeNav from '$lib/components/DarkModeNav.svelte'
 </script>
 
-<div class:dark={$settings.darkMode}>
-	<slot />
-</div>
+<DarkModeNav />
+<slot />
