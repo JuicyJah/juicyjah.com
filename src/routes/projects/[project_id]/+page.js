@@ -11,10 +11,17 @@ async function getContent(projectId) {
 
 export async function load({ params, data }) {
   const projectId = params?.project_id
-  const internalProjectDoc = await getContent(projectId)
+  try {
+    const internalProjectDoc = await getContent(projectId)
+    return {
+      ...data,
+      content: internalProjectDoc
+    }
 
+  } catch (e) {
+    console.log("error getting content", e)
+  }
   return {
-    ...data,
-    content: internalProjectDoc
+    ...data
   }
 }
