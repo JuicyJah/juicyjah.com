@@ -49,18 +49,18 @@ export async function load({ params, fetch }) {
     }
   }
 
-  let data, json, readme, respCopy
+  let resp, json, readme
 
   try {
-    data = await fetch(project.readme, {
+    resp = await fetch(project.readme, {
       headers: {
-        "Content-Type": "application/json"
+        "Accept": "application/json"
       }
     })
-    respCopy = data.clone()
+
     try {
-      json = await data.text()
-      readme = json //json?.payload?.blob?.richText
+      json = await resp.json()
+      readme = json?.payload?.blob?.richText
       updateCache(project, readme)
       return {
         project,
@@ -68,7 +68,7 @@ export async function load({ params, fetch }) {
       }
     } catch (e) {
       console.log("Got an error parsing GitHub response: not json", e)
-      console.log(`GitHub response is ${data.ok ? 'ok' : 'not ok'} with status ${data.status}`, (await respCopy.text()).substring(0, 10000))
+      console.log(`GitHub response is ${resp.ok ? 'ok' : 'not ok'} with status ${resp.status}`)
     }
   } catch (e) {
     console.log("Got an error retrieving GitHub Readme", e)
