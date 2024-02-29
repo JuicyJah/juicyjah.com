@@ -2,7 +2,7 @@
 	export let project
 </script>
 
-<a href="/projects/{project.id}" class="flex flex-col font-color-default block min-w-0 max-w-sm flex-1 rounded-lg shadow p-4 m-2 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
+<a href="/projects/{project.id}" class="flex flex-col font-color-default block min-w-80 max-w-sm flex-1 rounded-lg shadow p-4 m-2 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700">
 	<h1 class="text-2xl font-bold leading-7 sm:truncate sm:text-3xl sm:tracking-tight">{project.name}</h1>
 	<p class="text-md leading-7 sm:tracking-tight py-4 grow">{project.description}</p>
 

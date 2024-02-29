@@ -20,14 +20,7 @@
 		}
 	]
 
-	const tabs = [
-		{
-			name: 'About'
-		},
-		{
-			name: 'Readme'
-		}
-	]
+	let tabs = []
 
 	function tabIsFirst(index) {
 		return index == 0
@@ -41,6 +34,10 @@
 	$: crumbs[crumbs.length - 1].text = project?.name
 
 	let tabSelection = 'About'
+
+	$: if (content) tabs = [...tabs, { name: 'About' }]
+	$: if (readme) tabs = [...tabs, { name: 'Readme' }]
+	$: tabSelection = tabs.at(0)?.name
 </script>
 
 <div class="container max-w-screen-lg mx-auto">
@@ -120,7 +117,7 @@
 		{/each}
 	</div>
 
-	{#if tabSelection == 'About'}
+	{#if tabSelection == 'About' && content}
 		<div class="markdown">
 			<svelte:component this={content} />
 		</div>

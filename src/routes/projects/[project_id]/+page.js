@@ -4,7 +4,6 @@ async function getContent(projectId) {
     const doc = await list[`/src/lib/projects/${projectId}.md`]()
     return doc?.default
   } catch (e) {
-    console.log("Error getting markdown content", e)
     return null
   }
 }
@@ -19,9 +18,8 @@ export async function load({ params, data }) {
     }
 
   } catch (e) {
-    console.log("error getting content", e)
-  }
-  return {
-    ...data
+    return {
+      ...data
+    }
   }
 }

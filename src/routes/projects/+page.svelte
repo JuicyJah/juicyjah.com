@@ -22,7 +22,7 @@
 <div class="container max-w-screen-lg mx-auto">
 	<BreadCrumb {crumbs} />
 
-	<div class="flex justify-around">
+	<div class="flex flex-wrap justify-around">
 		{#each projects as project}
 			<Project {project} />
 		{/each}
