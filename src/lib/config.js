@@ -57,5 +57,13 @@ export const PROJECTS = [
     github: 'https://github.com/JuicyJah/svelte-inputs',
     tags: [TAGS.simple, TAGS.svelte, TAGS.npm]
   },
-
+  {
+    id: "juicy-weather",
+    name: "Juicy Weather",
+    description: "The Juiciest weather app! An API based weather UI.",
+    demo: "https://weather.juicyjah.com",
+    readme: "https://github.com/JuicyJah/juicy-weather/blob/main/README.md",
+    github: "https://github.com/JuicyJah/juicy-weather",
+    tags: [TAGS.simple, TAGS.svelte, TAGS.css]
+  }
 ]
