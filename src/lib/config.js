@@ -58,6 +58,15 @@ export const PROJECTS = [
     tags: [TAGS.simple, TAGS.svelte, TAGS.npm]
   },
   {
+    id: "tokencount-io",
+    name: "TokenCount.io",
+    description: "A versatile AI token counter SAAS",
+    demo: "https://tokencount.io",
+    readme: null,
+    github: null,
+    tags: [TAGS.simple, TAGS.svelte, TAGS.css]
+  },
+  {
     id: "juicy-weather",
     name: "Juicy Weather",
     description: "The Juiciest weather app! An API based weather UI.",
