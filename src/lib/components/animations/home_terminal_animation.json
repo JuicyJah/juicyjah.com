@@ -262,6 +262,7 @@
     {
       "action": "print",
       "content": "> build me a desktop app",
+      "trigger": "look_over_here",
       "delay": 580,
       "clear": true
     },
@@ -292,7 +293,8 @@
     },
     {
       "action": "print",
-      "content": "> make it use python",
+      "content": "> make it pretty",
+      "trigger": "bow",
       "delay": 580,
       "clear": true
     },
@@ -322,13 +324,15 @@
     },
     {
       "action": "print",
-      "content": "> make it pretty",
+      "content": "> scale it",
+      "trigger": "scale",
       "delay": 300,
       "clear": true
     },
     {
       "action": "print",
       "content": "> make it reliable",
+      "trigger": "bow_out",
       "delay": 300,
       "clear": true
     },
@@ -359,14 +363,9 @@
     },
     {
       "action": "print",
-      "content": "> scale it",
-      "delay": 300,
-      "clear": true
-    },
-    {
-      "action": "print",
       "content": "> ship it",
-      "delay": 300,
+      "delay": 600,
+      "trigger": "ship_it",
       "clear": true
     },
     {

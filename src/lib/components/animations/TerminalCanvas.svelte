@@ -73,7 +73,15 @@
 			for (let i = 0; i < lines.length; i++) {
 				const line = lines[i]
 				if (['print', 'type'].includes(line?.action) && line?.content != null) {
-					if (line.trigger) dispatch('trigger', line.trigger)
+					if (line.trigger) {
+						if (line.trigger?.size) {
+							line.trigger.forEach((t) => {
+								dispatch('trigger', t)
+							})
+						} else {
+							dispatch('trigger', line.trigger)
+						}
+					}
 					switch (line.action) {
 						case 'print':
 							if (line.sound == true) {
@@ -102,7 +110,6 @@
 		clear() {
 			this.lines = []
 			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-			// this.ctx.fillText('', this.xStart, 30)
 		}
 	}
 
