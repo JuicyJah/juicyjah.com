@@ -1,0 +1,425 @@
+{
+  "awaiting_input": [
+    {
+      "action": "print",
+      "content": ">",
+      "delay": 500
+    }
+  ],
+  "play_music": [
+    {
+      "action": "type",
+      "content": "> play music",
+      "sound": true,
+      "delay": 300
+    },
+    {
+      "action": "print",
+      "content": ""
+    },
+    {
+      "action": "print",
+      "sound": true,
+      "content": "\t\t\t\tGot it. Playing Music."
+    },
+    {
+      "action": "print",
+      "content": "",
+      "delay": 500
+    },
+    {
+      "action": "type",
+      "content": ">",
+      "delay": 1200
+    }
+  ],
+  "get_started": [
+    {
+      "action": "type",
+      "content": "> give it some flair",
+      "sound": true,
+      "delay": 200
+    },
+    {
+      "action": "print",
+      "sound": true,
+      "content": "\t\t\t\tSure! Adding some flair",
+      "trigger": "music_notes"
+    },
+    {
+      "action": "type",
+      "content": ">",
+      "delay": 1000,
+      "clear": true
+    },
+    {
+      "action": "type",
+      "content": "> build me a demo",
+      "sound": true,
+      "delay": 200
+    },
+    {
+      "action": "print",
+      "sound": true,
+      "content": "\t\t\t\tPreparing demo..."
+    },
+    {
+      "action": "type",
+      "content": ">",
+      "delay": 1000,
+      "clear": true
+    },
+    {
+      "action": "type",
+      "content": "> show me what you can do",
+      "sound": true,
+      "delay": 200
+    },
+    {
+      "action": "print",
+      "content": ""
+    },
+    {
+      "action": "print",
+      "content": "\t\t\t\t...",
+      "sound": true,
+      "delay": 300
+    },
+    {
+      "action": "print",
+      "content": "",
+      "delay": 500
+    },
+    {
+      "action": "print",
+      "content": "\t\t\t\tExecuting demo...",
+      "sound": true
+    },
+    {
+      "action": "print",
+      "content": "",
+      "delay": 500
+    },
+    {
+      "action": "type",
+      "content": ">",
+      "trigger": "bgfade",
+      "delay": 1700
+    }
+  ],
+  "read_weather": [
+    {
+      "action": "type",
+      "content": "> what's the weather",
+      "sound": true,
+      "delay": 500
+    },
+    {
+      "action": "print",
+      "content": ""
+    },
+    {
+      "action": "print",
+      "content": "\t\t\t\tLooking up the weather...",
+      "sound": true,
+      "delay": 300
+    },
+    {
+      "action": "type",
+      "content": "\t\t\t\t...",
+      "delay": 800
+    },
+    {
+      "action": "type",
+      "content": "\t\t\t\t...",
+      "delay": 800
+    },
+    {
+      "action": "print",
+      "content": ""
+    },
+    {
+      "action": "print",
+      "sound": true,
+      "content": "\t\t\t\tThe weather is currently {{weather}}"
+    },
+    {
+      "action": "print",
+      "content": "\t\t\t\tAt {{timestamp}}"
+    },
+    {
+      "action": "print",
+      "content": "",
+      "delay": 500
+    },
+    {
+      "action": "type",
+      "content": ">",
+      "delay": 2000
+    }
+  ],
+  "build_me": [
+    {
+      "action": "type",
+      "content": "> build me a weather app",
+      "sound": true,
+      "delay": 800,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a pomodoro app",
+      "trigger": "lightning",
+      "delay": 800,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a to-do list",
+      "delay": 800,
+      "trigger": "checkbox",
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a chat bot",
+      "delay": 800,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a card game",
+      "delay": 800,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a ride share app",
+      "trigger": "terminalCar",
+      "delay": 800,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something with Chat GPT",
+      "delay": 800,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something with LLama",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something with Gemini",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something tested",
+      "trigger": "hammer_test",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something tried and true",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something unique",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something different",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me something that blows my socks off",
+      "trigger": "socks",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a calendar",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a chrome extension",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me a desktop app",
+      "trigger": "look_over_here",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me an assistant",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build me an AI token counter",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it sparkle",
+      "trigger": "sparkle",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it use ruby",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it pretty",
+      "trigger": "bow",
+      "delay": 580,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it use javascript",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it use svelte",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it use react",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it use that fancy new framework",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> scale it",
+      "trigger": "scale",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it reliable",
+      "trigger": "bow_out",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> make it secure",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> give it confetti",
+      "trigger": "confetti",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> plan it",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> package it",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> ship it",
+      "delay": 600,
+      "trigger": "ship_it",
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> imagine it",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> design it",
+      "delay": 300,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build it",
+      "delay": 500,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build it"
+    },
+    {
+      "action": "type",
+      "content": "\t\t\t\tWhatever you imagine.",
+      "sound": true,
+      "delay": 700,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build it"
+    },
+    {
+      "action": "type",
+      "content": "\t\t\t\tWhatever you build.",
+      "sound": true,
+      "delay": 700,
+      "clear": true
+    },
+    {
+      "action": "print",
+      "content": "> build it"
+    },
+    {
+      "action": "type",
+      "content": "\t\t\t\tBuild it Juicy.",
+      "trigger": "reset",
+      "sound": true,
+      "delay": 3000
+    }
+  ]
+}
