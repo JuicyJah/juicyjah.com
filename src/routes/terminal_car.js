@@ -113,8 +113,8 @@ function addLights() {
 
 function onResize() {
   ({ width, height } = computedBounds(parentElement))
-  camera.aspect = width / height;
   camera.updateProjectionMatrix();
+  renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(width, height);
 }
 

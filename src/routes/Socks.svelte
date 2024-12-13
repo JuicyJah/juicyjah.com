@@ -8,14 +8,14 @@
 	const yDir = top != null ? -1 : 1
 </script>
 
-<div class="socks-container absolute" style="top: {top}; bottom: {bottom}; left: {left}; right: {right};">
+<div class="socks-container absolute min-w-[4rem] h-[4rem] border-none z-30" style="top: {top}; bottom: {bottom}; left: {left}; right: {right};">
 	<img
 		alt="socks"
 		src="/assets/socks.png"
 		class="socks absolute"
 		style="
-        --x-move: {6 * Math.random() * xDir}vw;
-        --y-move: {6 * Math.random() * yDir}vh;
+        --x-move: {6 * Math.random() * xDir + 2}vw;
+        --y-move: {6 * Math.random() * yDir + 2}vh;
       " />
 </div>
 
@@ -26,9 +26,18 @@
 
 	.socks {
 		transform-origin: center;
-		min-width: 50px;
-		height: 50px;
+		min-width: 4rem;
+		height: 4rem;
 		animation: fly-out 0.5s forwards;
+		--moveX: calc(-1 * var(--x-move));
+		--moveY: calc(-1 * var(--y-move));
+	}
+
+	@media (min-width: 1024px) {
+		.socks {
+			--moveX: var(--x-move);
+			--moveY: var(--y-move);
+		}
 	}
 
 	@keyframes fly-out {
@@ -36,7 +45,7 @@
 			opacity: 0.9;
 		}
 		95% {
-			transform: translateX(var(--x-move)) translateY(var(--y-move)) rotate(360deg);
+			transform: translateX(var(--moveX)) translateY(var(--moveY)) rotate(360deg);
 			opacity: 0.5;
 		}
 		100% {

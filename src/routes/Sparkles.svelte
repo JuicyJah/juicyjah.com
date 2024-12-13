@@ -51,11 +51,20 @@
 		width: 5px;
 		height: 5px;
 		animation: fly-out 0.5s forwards;
+		--moveX: calc(-1 * var(--x-move));
+		--moveY: calc(-1 * var(--y-move));
+	}
+
+	@media (min-width: 1024px) {
+		.sparkles {
+			--moveX: calc(-1 * var(--x-move));
+			--moveY: calc(-1 * var(--y-move));
+		}
 	}
 
 	@keyframes fly-out {
 		95% {
-			transform: translateX(var(--x-move)) translateY(var(--y-move));
+			transform: translateX(var(--moveX)) translateY(var(--moveY));
 			opacity: 0.5;
 		}
 		100% {

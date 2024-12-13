@@ -5,7 +5,7 @@
 	const keyboardAudioURL = '/assets/keyboard_type.mp3'
 	const popAudioURL = '/assets/pop.mp3'
 
-	let canvas, keyboardTyping, popSound
+	let canvas, keyboardTyping, popSound, term
 
 	class AnimatedConsole {
 		lineHeight = 20
@@ -13,12 +13,16 @@
 		constructor(canvas) {
 			this.lines = []
 			this.canvas = canvas
-			this.ctx = canvas.getContext('2d')
-			this.ctx.font = '16px monospace'
-			this.ctx.fillStyle = 'white'
+			this.resetContext()
 
 			this.charIndex = 0
 			this.currentLine = ''
+		}
+
+		resetContext() {
+			this.ctx = canvas.getContext('2d')
+			this.ctx.font = '16px monospace'
+			this.ctx.fillStyle = 'white'
 		}
 
 		type(command) {
@@ -116,6 +120,16 @@
 	onMount(() => {
 		keyboardTyping = new Audio(keyboardAudioURL)
 		popSound = new Audio(popAudioURL)
+
+		term = new AnimatedConsole(canvas)
+		setCanvasSize()
+
+		dispatch('ready', {
+			terminal: term
+		})
+	})
+
+	function setCanvasSize() {
 		const parent = getComputedStyle(canvas.parentElement)
 		const mr = Number(parent.marginRight.replace(/px$/, ''))
 		const ml = Number(parent.marginLeft.replace(/px$/, ''))
@@ -130,14 +144,15 @@
 		canvas.width = w
 		canvas.height = h
 
-		const term = new AnimatedConsole(canvas)
+		term.resetContext()
+	}
 
-		dispatch('ready', {
-			terminal: term
-		})
-	})
+	function resizeTerminal(e) {
+		setCanvasSize()
+	}
 </script>
 
+<svelte:window on:resize={resizeTerminal} />
 <canvas bind:this={canvas} id="commandPromptCanvas"></canvas>
 
 <style>

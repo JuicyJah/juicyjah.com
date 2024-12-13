@@ -172,7 +172,7 @@
 	<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-32 z-10">
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-4xl font-bold tracking-tight text-center text-gray-900 dark:text-slate-200 sm:text-6xl p-2">JuicyJah</h1>
-			<div class="terminal-shell w-[100vw] lg:w-[48rem] h-64 z-30 relative box-border" class:scale-in-out={scale} class:ship-it={shipIt}>
+			<div class="terminal-shell w-[100vw] max-w-[48rem] lg:w-[48rem] h-64 z-30 relative box-border" class:scale-in-out={scale} class:ship-it={shipIt}>
 				<div class="terminal-shell-front w-full h-full border-8 border-gray-500 rounded-md">
 					<div class="bg-black w-full h-full relative">
 						<TerminalCanvas on:ready={terminalAnimations} on:trigger={trigger} />
