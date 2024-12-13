@@ -220,6 +220,7 @@
     {
       "action": "print",
       "content": "> build me something tested",
+      "trigger": "hammer_test",
       "delay": 580,
       "clear": true
     },

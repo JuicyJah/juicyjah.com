@@ -57,8 +57,8 @@
 
 	@media (min-width: 1024px) {
 		.sparkles {
-			--moveX: calc(-1 * var(--x-move));
-			--moveY: calc(-1 * var(--y-move));
+			--moveX: calc(var(--x-move));
+			--moveY: calc(var(--y-move));
 		}
 	}
 

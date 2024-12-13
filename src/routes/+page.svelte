@@ -1,5 +1,4 @@
 <script>
-	import { browser } from '$app/environment'
 	import { ROUTES } from '$lib/config.js'
 	import TerminalCanvas from '$lib/components/animations/TerminalCanvas.svelte'
 	import TerminalAnimations from '$lib/components/animations/home_terminal_animation.json'
@@ -13,6 +12,7 @@
 	import BowAnimation from './BowAnimation.svelte'
 	import LookOverHere from './LookOverHere.svelte'
 	import Lightning from './Lightning.svelte'
+	import HammerTest from './HammerTest.svelte'
 
 	let audioPlayer, duration, currentTime, paused, volume, status, isPlaying
 	const videoUrl = '/assets/build_it_juicy.mp3'
@@ -95,6 +95,7 @@
 		bgDraw = null,
 		lightning = false,
 		terminalCar,
+		hammerTest = false,
 		musicNotes = false,
 		playCheckbox = false,
 		scale = null,
@@ -156,6 +157,13 @@
 			shipIt = true
 			bow = false
 		}
+
+		if (trig == 'hammer_test') {
+			hammerTest = true
+			setTimeout(() => {
+				hammerTest = false
+			}, 1160 + 580)
+		}
 	}
 </script>
 
@@ -184,10 +192,20 @@
 				<div class="terminal-shell-front w-full h-full border-8 border-gray-500 rounded-md">
 					<div class="bg-black w-full h-full relative">
 						<TerminalCanvas on:ready={terminalAnimations} on:trigger={trigger} />
+
 						{#if musicNotes}
 							<MusicNotes />
 						{/if}
+
 						<TerminalCar bind:this={terminalCar} />
+
+						{#if hammerTest}
+							<HammerTest top={'5%'} left={'1rem'} />
+							<HammerTest top={'5%'} right={'-2rem'} flipped={true} />
+							<HammerTest bottom={'-1.5rem'} left={'20%'} horizontal={true} />
+							<HammerTest bottom={'-1.5rem'} right={'15%'} flipped={true} horizontal={true} />
+						{/if}
+
 						<audio
 							bind:this={audioPlayer}
 							bind:duration
@@ -204,6 +222,7 @@
 								currentTime = 0
 							}}
 							src={videoUrl} />
+
 						{#if !play}
 							<button class="absolute rounded-full top-[40%] right-[48%] text-5xl text-slate-50" on:click={() => (play = true)}><i class="fa-solid fa-play"></i></button>
 						{/if}

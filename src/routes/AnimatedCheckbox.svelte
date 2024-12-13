@@ -6,7 +6,7 @@
 </script>
 
 <div class="checkbox-wrapper absolute top-[5%] right-[5%] lg:top-0 lg:right-0">
-	<div class="checkbox" class:active style="--width: {width}px; --height: {height}px; cursor: default;"></div>
+	<div class="checkbox" class:active style="--width: {width}px; --height: {height}px;"></div>
 </div>
 
 <style>
@@ -73,7 +73,7 @@
 		height: var(--height);
 		width: var(--width);
 		background-color: transparent;
-		border: calc(var(--width) / 10) solid black;
+		border: calc(var(--width) / 10) solid transparent;
 		border-radius: calc(var(--width) / 20);
 		position: relative;
 		display: inline-block;
@@ -84,7 +84,7 @@
 		-o-transition: border-color ease 0.2s;
 		-webkit-transition: border-color ease 0.2s;
 		transition: border-color ease 0.2s;
-		cursor: pointer;
+		cursor: default;
 	}
 
 	.checkbox::before,
