@@ -1,4 +1,5 @@
 <script>
+	import { browser } from '$app/environment'
 	import { ROUTES } from '$lib/config.js'
 	import TerminalCanvas from '$lib/components/animations/TerminalCanvas.svelte'
 	import TerminalAnimations from '$lib/components/animations/home_terminal_animation.json'
@@ -11,6 +12,7 @@
 	import AnimatedCheckbox from './AnimatedCheckbox.svelte'
 	import BowAnimation from './BowAnimation.svelte'
 	import LookOverHere from './LookOverHere.svelte'
+	import Lightning from './Lightning.svelte'
 
 	let audioPlayer, duration, currentTime, paused, volume, status, isPlaying
 	const videoUrl = '/assets/build_it_juicy.mp3'
@@ -91,6 +93,7 @@
 		playSparkles = false,
 		playSocks = false,
 		bgDraw = null,
+		lightning = false,
 		terminalCar,
 		musicNotes = false,
 		playCheckbox = false,
@@ -119,6 +122,11 @@
 		if (trig == 'reset') {
 			musicNotes = false
 			bgDraw = false
+		}
+
+		if (trig == 'lightning') {
+			lightning = true
+			setTimeout(() => (lightning = false), 2000)
 		}
 
 		if (trig == 'terminalCar') terminalCar.startAnimation()
@@ -241,6 +249,10 @@
 	</div>
 	{#if lookOverHere}
 		<LookOverHere />
+	{/if}
+
+	{#if lightning}
+		<Lightning />
 	{/if}
 </div>
 

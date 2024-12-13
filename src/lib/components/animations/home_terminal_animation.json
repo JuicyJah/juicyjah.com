@@ -103,6 +103,7 @@
     {
       "action": "type",
       "content": ">",
+      "trigger": "bgfade",
       "delay": 1700
     }
   ],
@@ -162,13 +163,13 @@
       "action": "type",
       "content": "> build me a weather app",
       "sound": true,
-      "trigger": "bgfade",
       "delay": 800,
       "clear": true
     },
     {
       "action": "print",
       "content": "> build me a pomodoro app",
+      "trigger": "lightning",
       "delay": 800,
       "clear": true
     },

@@ -1,5 +1,5 @@
 <script>
-	import { onMount, createEventDispatcher } from 'svelte'
+	import { onMount, createEventDispatcher, onDestroy } from 'svelte'
 	const dispatch = createEventDispatcher()
 
 	const keyboardAudioURL = '/assets/keyboard_type.mp3'
@@ -127,6 +127,14 @@
 		dispatch('ready', {
 			terminal: term
 		})
+	})
+
+	onDestroy(() => {
+		keyboardTyping?.pause()
+		keyboardTyping?.load()
+
+		popSound?.pause()
+		popSound?.load()
 	})
 
 	function setCanvasSize() {
