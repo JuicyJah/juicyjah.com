@@ -64,13 +64,6 @@
 		animation-delay: var(--delay);
 		animation-direction: normal;
 		animation-fill-mode: none;
-		/* animation-duration: var(--duration), var(--duration);
-		animation-iteration-count: 300, infinite;
-		animation-timing-function: linear, ease-in-out;
-		animation-delay: var(--delay), var(--delay);
-		animation-direction: normal, normal;
-		animation-fill-mode: forwards, forwards; */
-		/* drift {duration}s ease-in-out infinite alternate; */
 	}
 
 	@keyframes confetti-fall {
@@ -79,6 +72,7 @@
 		}
 		50% {
 			transform: translateX(var(--drift));
+			opacity: 0.9;
 		}
 		100% {
 			transform: translateY(100vh) rotate(720deg) translateX(0);

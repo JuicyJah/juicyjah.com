@@ -1,15 +1,15 @@
 <script>
 </script>
 
-<div class="look-over-here here-1 fixed bottom-0 right-0 p-6 rounded-md font-color-default bg-slate-700">
+<div class="look-over-here here-1 fixed bottom-0 right-0 p-6 rounded-md text-slate-50 bg-slate-700">
 	<p>Hey, look over here! <span class="">👋</span></p>
 </div>
 
-<div class="look-over-here here-2 fixed bottom-0 left-0 p-6 rounded-md font-color-default bg-slate-700">
+<div class="look-over-here here-2 fixed bottom-0 left-0 p-6 rounded-md text-slate-50 bg-slate-700">
 	<p>Now here! <span class="flip-emoji">👋</span></p>
 </div>
 
-<div class="look-over-here here-3 fixed top-0 left-0 p-6 rounded-md font-color-default bg-slate-700">
+<div class="look-over-here here-3 fixed top-0 left-0 p-6 rounded-md text-slate-50 bg-slate-700">
 	<p>Over here! <span class="flip-emoji">👋</span></p>
 </div>
 

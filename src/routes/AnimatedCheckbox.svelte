@@ -5,8 +5,8 @@
 	const width = 50
 </script>
 
-<div class="checkbox-wrapper absolute top-0 right-0">
-	<div class="checkbox" class:active style="--width: {width}px; --height: {height}px;"></div>
+<div class="checkbox-wrapper absolute top-[5%] right-[5%] lg:top-0 lg:right-0">
+	<div class="checkbox" class:active style="--width: {width}px; --height: {height}px; cursor: default;"></div>
 </div>
 
 <style>
