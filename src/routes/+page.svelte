@@ -164,9 +164,11 @@
 			style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
 		</div>
 	</div>
-	<div class="animation-bg-1 fixed top-0 right-0 bottom-0 left-0 bg-slate-900" class:active={bgDraw} class:reset={bgDraw == false}>
-		<Stars />
-	</div>
+	{#if play}
+		<div class="animation-bg-1 fixed top-0 right-0 bottom-0 left-0 bg-slate-900" class:active={bgDraw} class:reset={bgDraw == false}>
+			<Stars />
+		</div>
+	{/if}
 	<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-32 z-10">
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-4xl font-bold tracking-tight text-center text-gray-900 dark:text-slate-200 sm:text-6xl p-2">JuicyJah</h1>

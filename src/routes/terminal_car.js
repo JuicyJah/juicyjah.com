@@ -84,7 +84,7 @@ export async function init(node) {
   controls = new OrbitControls(camera, renderer.domElement)
   controls.autoRotate = false
   controls.autoRotateSpeed = 0.3
-  controls.enabled = true
+  controls.enabled = false
 
   window.addEventListener('resize', onResize)
 }
