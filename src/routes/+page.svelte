@@ -79,6 +79,7 @@
 			play = false
 			bow = false
 			shipIt = false
+			bgDraw = null
 			lookOverHere = false
 		}
 	}
