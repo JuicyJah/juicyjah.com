@@ -264,7 +264,10 @@
 			{#if playConfetti}
 				<Confetti on:finished={() => (playConfetti = false)} />
 			{/if}
-			<a type="button" href={ROUTES.projects} class="button primary text-lg px-3 py-1 mt-4">See Projects <i class="ml-2 fa-solid fa-arrow-right"></i></a>
+
+			{#if !play}
+				<a type="button" href={ROUTES.projects} class="button primary text-lg px-3 py-1 mt-4">See Projects <i class="ml-2 fa-solid fa-arrow-right"></i></a>
+			{/if}
 		</div>
 	</div>
 	{#if lookOverHere}

@@ -14,6 +14,8 @@ const TAGS = {
   aws: { text: "AWS", icon: "fa-brands fa-aws" },
   stripe: { text: "Stripe", icon: "fa-brands fa-stripe" },
   cloudflare: { text: "Cloudflare", icon: "fa-brands fa-cloudflare" },
+  // tools
+  ai: { text: "AI", icon: "fa-solid fa-robot" },
   // languages & frameworks
   markdown: { text: "Markdown", icon: "fa-brands fa-markdown" },
   js: { text: "JavaScript", icon: "fa-brands fa-js" },
@@ -38,6 +40,33 @@ export const PROJECTS = [
     readme: "https://github.com/JuicyJah/juicyjah.com/blob/main/README.md",
     github: "https://github.com/JuicyJah/juicyjah.com",
     tags: [TAGS.simple, TAGS.svelte, TAGS.css]
+  },
+  {
+    id: "juicy-logs",
+    name: 'Juicy Logs',
+    description: 'A simple and scalable logging alternative for developers and entrepreneurs.',
+    demo: "https://logs.juicyjah.com",
+    readme: null,
+    github: null,
+    tags: [TAGS.aws, TAGS.svelte, TAGS.css, TAGS.complex, TAGS.nodejs]
+  },
+  {
+    id: "juicy-logs-npm-core",
+    name: 'juicy-logs-kit-core',
+    description: 'A NodeJS (npm) package for the core Juicy Logs service.',
+    demo: "https://www.npmjs.com/package/@juicyjah/juicy-logs-kit-core",
+    readme: 'https://github.com/JuicyJah/juicy-logs-kit-core/blob/master/README.md',
+    github: 'https://github.com/JuicyJah/juicy-logs-kit-core',
+    tags: [TAGS.npm, TAGS.simple, TAGS.nodejs]
+  },
+  {
+    id: "juicy-logs-npm-svelte",
+    name: 'juicy-logs-kit-svelte',
+    description: 'An npm package for the Juicy Logs service, built for easy Svelte integration.',
+    demo: "https://www.npmjs.com/package/@juicyjah/juicy-logs-kit-svelte",
+    readme: 'https://github.com/JuicyJah/juicy-logs-kit-svelte/blob/main/README.md',
+    github: 'https://github.com/JuicyJah/juicy-logs-kit-svelte',
+    tags: [TAGS.npm, TAGS.simple, TAGS.svelte]
   },
   {
     id: "pomodoro",
@@ -74,5 +103,14 @@ export const PROJECTS = [
     readme: "https://github.com/JuicyJah/juicy-weather/blob/main/README.md",
     github: "https://github.com/JuicyJah/juicy-weather",
     tags: [TAGS.simple, TAGS.svelte, TAGS.css]
-  }
+  },
+  {
+    id: "clinical-buddy",
+    name: "Clinical Buddy",
+    description: "A simple interface to record, transcribe, summarize, and auto-fill clinical notes.",
+    demo: "https://clinicalbuddy.juicyjah.com/session",
+    readme: null,
+    github: null,
+    tags: [TAGS.ai, TAGS.simple, TAGS.svelte, TAGS.css]
+  },
 ]
