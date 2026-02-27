@@ -19,7 +19,7 @@ export async function load() {
       sorts: [
         {
           property: "Created time",
-          direction: "ascending"
+          direction: "descending"
         }
       ]
     }

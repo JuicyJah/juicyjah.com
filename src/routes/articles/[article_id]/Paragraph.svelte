@@ -10,7 +10,7 @@
 	export let rich_text
 </script>
 
-<div class="py-[3px]" class:empty={!rich_text?.length}>
+<div class="py-1 leading-7 text-slate-600 dark:text-zinc-300" class:empty={!rich_text?.length}>
 	{#each rich_text as txtItem}
 		<RichText {...txtItem} />
 	{/each}
