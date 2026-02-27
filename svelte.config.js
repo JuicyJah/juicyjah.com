@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-cloudflare'
+// import adapter from '@sveltejs/adapter-cloudflare'
+import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
@@ -14,6 +15,6 @@ const config = {
 	preprocess: [mdsvex({
 		extensions: [".md"]
 	}), vitePreprocess()]
-};
+}
 
-export default config;
+export default config
