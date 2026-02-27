@@ -2,6 +2,7 @@
 	import { page } from '$app/stores'
 	import Block from './Block.svelte'
 	import { ROUTES } from '$lib/config.js'
+	import ArticleLoadingPlaceholder from '$lib/components/ArticleLoadingPlaceholder.svelte'
 
 	$: ({ article } = $page.data)
 </script>
@@ -14,15 +15,21 @@
 		Articles
 	</a>
 
-	<h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-zinc-50 mb-4">{article.title}</h1>
+	{#await article}
+		<ArticleLoadingPlaceholder />
+	{:then resolvedArticle}
+		<h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-zinc-50 mb-4">{resolvedArticle.title}</h1>
 
-	<div class="flex items-center gap-3 text-sm text-slate-400 dark:text-zinc-500 mb-12">
-		<span>By JuicyJah</span>
-		<span>&middot;</span>
-		<span>Last updated {new Date(article.lastEditedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-	</div>
+		<div class="flex items-center gap-3 text-sm text-slate-400 dark:text-zinc-500 mb-12">
+			<span>By JuicyJah</span>
+			<span>&middot;</span>
+			<span>Last updated {new Date(resolvedArticle.lastEditedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+		</div>
 
-	{#each article.blocks as block}
-		<Block {...block} />
-	{/each}
+		{#each resolvedArticle.blocks as block}
+			<Block {...block} />
+		{/each}
+	{:catch}
+		<p class="text-sm text-slate-400 dark:text-zinc-500 py-5">Failed to load article.</p>
+	{/await}
 </div>
