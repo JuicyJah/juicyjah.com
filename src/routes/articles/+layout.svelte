@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="mt-[-4rem] min-h-screen articles-bg">
+<div class="mt-[-6rem] min-h-screen articles-bg">
 	<div class="max-w-2xl mx-auto px-6 py-16 text-base">
 		<slot />
 	</div>
@@ -21,8 +21,14 @@
 	}
 
 	@keyframes gradient-shift {
-		0% { background-position: 0% 50%; }
-		50% { background-position: 100% 50%; }
-		100% { background-position: 0% 50%; }
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 </style>
