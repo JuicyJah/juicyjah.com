@@ -1,10 +1,11 @@
 import { client as notion } from "$lib/server/notion_client.js"
 import { redirect } from "@sveltejs/kit"
+import { ROUTES } from "$lib/config.js"
 
 export async function load({ params }) {
   const { article_id } = params
   if (!article_id) {
-    throw redirect(302, '/articles')
+    throw redirect(302, ROUTES.articles)
   }
 
   try {

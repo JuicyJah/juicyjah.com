@@ -3,7 +3,8 @@ export const ROUTES = {
   signup: "/auth/signup",
   login: "/auth/login",
   logout: "/auth/logout",
-  projects: "/projects"
+  projects: "/projects",
+  articles: "/articles"
 }
 
 const TAGS = {
