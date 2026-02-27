@@ -2,6 +2,13 @@ import { client as notion } from "$lib/server/notion_client.js"
 import { redirect } from "@sveltejs/kit"
 import { ROUTES } from "$lib/config.js"
 
+// Vercel CDN caching config
+export const config = {
+  isr: {
+    expiration: 14400 // revalidate every 4 hours
+  }
+}
+
 async function fetchArticle(article_id) {
   const page = await notion.pages.retrieve({
     page_id: article_id

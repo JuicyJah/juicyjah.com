@@ -1,6 +1,13 @@
 import { env } from '$env/dynamic/private'
 import { client as notion } from "$lib/server/notion_client.js"
 
+// Vercel CDN caching config
+export const config = {
+  isr: {
+    expiration: 300 // revalidate every 5 minutes
+  }
+}
+
 async function fetchArticles() {
   const database = await notion.databases.retrieve({
     database_id: env.NOTION_BLOG_DATABASE_ID
